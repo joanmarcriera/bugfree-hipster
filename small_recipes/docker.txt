@@ -1,0 +1,23 @@
+
+
+
+#Get the last ID .
+#Good to have in .bashrc
+
+alias dl='docker ps -l -q'
+
+
+#Clean up all stoped containers (fails on running ones)
+docker rm $(docker ps -a -q)
+
+#What ENV is on a container
+docker run ubuntu env
+
+##Generate an image dependency diagram 
+#you will need graphviz  //fedora 22 => dnf install graphviz //
+docker images -viz |dot -Tpng -o docker_dependencies.png
+python -m SimpleHTTPServer 8888
+web browser => http://localhost:8888/docker_dependencies.png
+
+
+
