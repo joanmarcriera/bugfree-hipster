@@ -1,4 +1,5 @@
 # bugfree-hipster
-Ready for testing
 
-now
+
+@Vagrant-box with docker preconfigured. 
+
